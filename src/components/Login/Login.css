@@ -1,0 +1,25 @@
+.offcanvas {
+    border-radius: 1%;
+    background-color: rgb(50, 50, 50, 0.6);
+    max-height: 50%;
+
+}
+#offcanvasRightLabel {
+    color: white;
+}
+.form-control {
+    background-color: rgb(0, 0, 0) !important;
+    border: none !important;
+}
+#email {
+    color: white;
+}
+#password {
+    color: white;
+}
+#emailLabel {
+    color: rgba(255, 255, 255, 0.603);
+}
+#passLabel {
+    color: rgba(255, 255, 255, 0.603);
+}

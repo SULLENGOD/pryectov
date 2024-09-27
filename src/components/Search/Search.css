@@ -1,0 +1,11 @@
+#offcanvasTop {
+    border-radius: 1%;
+    background-color: rgb(50, 50, 50, 0.6);
+    max-height: 10%;
+
+}
+#searchInput {
+    width: 1050px;
+    color: white;
+}
+

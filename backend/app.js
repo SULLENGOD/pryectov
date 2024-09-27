@@ -1,17 +1,38 @@
-const express =  require('express')
+const express = require('express');
+const cors = require('cors')
 const app = express();
-const port = 3000
+const sequelize = require('./db/connection')
 
-require('dotenv').config();
+//Vistas
 
-app.get('/home', (req, res) => {
-    res.send('Home')
-})
-app.get('/login', (req,res) => {
-    res.send('Login')
-})
+const crearUsuario =  require('./views/singIn')
 
-app.listen(port, () => {
-    console.log('Server on port: 3000');
-})
+
+require("dotenv").config()
+
+//Middleware
+app.use(express.json())
+app.use(cors())
+
+
+let serverStart = async () => {
+    try {
+      await sequelize.authenticate();
+      console.log("MySQL: Online");
+  
+      app.listen(3001, () => {
+        console.log(
+          "Server: Online",
+          "PORT: 3001"
+        );
+      });
+    } catch (error) {
+      console.log(`Error en el SQL: ${error}`);
+    }
+  };
+  
+
+serverStart()
+crearUsuario(app)
+
 

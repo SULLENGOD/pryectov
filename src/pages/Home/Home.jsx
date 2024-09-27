@@ -2,6 +2,7 @@ import { React, useEffect } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { Carousel } from "../../components/Carousel/Carousel";
 import { Lists } from "../../components/Lists/Lists";
+// import { Search } from '../../components/Search/Search';
 import './Home.css'
 
 const Home = () => {
@@ -22,6 +23,8 @@ const Home = () => {
             <div className="col-6">
                 <Lists />
             </div>
+            
+            
         </div>
       </div>
     </>
